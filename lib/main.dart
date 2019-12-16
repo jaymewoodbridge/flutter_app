@@ -10,46 +10,58 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      home:
-        GridView.count(
-          primary: false,
-          padding: const EdgeInsets.all(20),
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
-          crossAxisCount: 2,
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.blueGrey
+      ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('App Name'),
+        ),
+        body: GridView.count(
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+            crossAxisCount: 2,
           children: <Widget>[
             Container(
               padding: const EdgeInsets.all(8),
               child: const Text('Sound 1'),
-              color: Colors.teal[100],
+              color: Colors.blueGrey,
+              //color: Colors.teal[100],
             ),
             Container(
               padding: const EdgeInsets.all(8),
               child: const Text('Sound 2'),
-              color: Colors.teal[200],
+              color: Colors.blueGrey,
+              //color: Colors.teal[200],
             ),
             Container(
               padding: const EdgeInsets.all(8),
               child: const Text('Sound 3'),
-              color: Colors.teal[300],
+              color: Colors.blueGrey,
+              //color: Colors.teal[300],
             ),
             Container(
               padding: const EdgeInsets.all(8),
-              child: const Text('Sound 4'),
-              color: Colors.teal[400],
+              child: const Text('Soudn 4'),
+              color: Colors.blueGrey,
+              //color: Colors.teal[400],
             ),
             Container(
               padding: const EdgeInsets.all(8),
               child: const Text('Sound 5'),
-              color: Colors.teal[500],
+              color: Colors.blueGrey,
+              //color: Colors.teal[500],
             ),
             Container(
               padding: const EdgeInsets.all(8),
               child: const Text('Sound 6'),
-              color: Colors.teal[600],
+              color: Colors.blueGrey,
+              //color: Colors.teal[600],
             ),
           ],
         ),
+      ),
     );
   }
 }
