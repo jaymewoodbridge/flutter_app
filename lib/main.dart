@@ -2,13 +2,23 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+
 import 'package:flutter/material.dart';
+import 'package:audioplayer/audioplayer.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
+
   @override
+
+
   Widget build(BuildContext context) {
+
+
+    AudioPlayer audioPlugin = new AudioPlayer();
+
     return new MaterialApp(
       theme: ThemeData(
         brightness: Brightness.dark,
@@ -17,6 +27,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('App Name'),
+          centerTitle: true,
         ),
         body: GridView.count(
             crossAxisSpacing: 10,
@@ -55,8 +66,18 @@ class MyApp extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.all(8),
-              child: const Text('Sound 6'),
-              color: Colors.blueGrey,
+                color: Colors.blueGrey,
+                child:
+                GestureDetector(
+                    //onTap: () {
+                    //  AudioPlayer(AudioPlayerState.PLAYING(C:\Users\Jeremy\Downloads));
+                   // },
+
+                    child: Text( 'Sound 6', )
+                )
+
+
+
               //color: Colors.teal[600],
             ),
           ],
@@ -65,3 +86,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
